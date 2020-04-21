@@ -1,0 +1,7 @@
+.tabla{
+  width: 25%;
+  border: solid 1px darkgray;
+}
+body{
+  display: flex;
+}
