@@ -16,7 +16,6 @@ function presionEnlace() {
         for (let i=0;i<=arreglo.length;i++)
         {
           x.append("<div> usuario: "+ arreglo[i].userId + "</div> <div> id del post : "+ arreglo[i].id + " </div> <div> titulo : "+ arreglo[i].title + "</div>");
-
         }
       }
     );
