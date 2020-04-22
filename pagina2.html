@@ -8,58 +8,84 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="funcpag2.js"></script>
   <link rel = "stylesheet" type = "text/css"  href = "estilos.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="tabla">
-        <h1>traer todos los posts</h1>
-        <input type="button" id="btemp" value="traer posts" >
-        <div id="posts">
+  <div class="<div class="container">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialogo1">traer todos los posts</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialogo2">llamar post por ID</button>    
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialogo3">Actualizar o crear un post</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dialogo4">Eliminar un post</button>
+  </div>
+
+  <div class="modal fade" id="dialogo1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <h1>traer todos los posts</h1>
+          <input type="button" id="btemp" value="traer posts" >
+          <div id="posts">
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="dialogo2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <h1>posts x id</h1>
+        <label>Id del post</label>
+        <input type="text" id="idpost">
+        <div id= "postID">
+        <input type="button" id="btpostxid" value="Traer post por id">
 
         </div>
-    </div>
+      </div>
+   </div>
+  </div>
 
-    <div class="tabla">
-      <h1>posts x id</h1>
-      <label>Id del post</label>
-      <input type="text" id="idpost">
-      <div id= "postID">
-      <input type="button" id="btpostxid" value="Traer post por id">
-
-      </div>
-    </div>
-
-    <div class="tabla">
-      <h1>Crear un post</h1>
-      <div>
-        <label>titulo del post</label>
-        <input type="text" id="idTitulo">
-      </div>
-      <div>
-        <label>Body del post</label>
-        <input type="text" id="idCreaBody">
-      </div>
-      <div>
-        <label>Id del Usuario</label>
-        <input type="text" id="idUser">
-      </div>
-        <input type=button id="btCrearPost" value="Crear un post">
-        <h1>Actualizar un post</h1>
+  <div class="modal fade" id="dialogo3">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <h1>Crear un post</h1>
         <div>
-          <label> id del post</label>
-          <input type="text" id="PostAActualiz">
+          <label>titulo del post</label>
+          <input type="text" id="idTitulo">
         </div>
-        <input type="button" id="btActualizarpost" value="Actualizar el post">
-    </div>
-
-    <div class="tabla">
-      <h1>Borrar post x ID</h1>
-      <div>
-        <label>post id:</label>
-        <input type="text" id="IdBorrarpost">
-
+        <div>
+          <label>Body del post</label>
+          <input type="text" id="idCreaBody">
+        </div>
+        <div>
+          <label>Id del Usuario</label>
+          <input type="text" id="idUser">
+        </div>
+          <input type=button id="btCrearPost" value="Crear un post">
+          <h1>Actualizar un post</h1>
+          <div>
+            <label> id del post</label>
+            <input type="text" id="PostAActualiz">
+          </div>
+          <input type="button" id="btActualizarpost" value="Actualizar el post">
       </div>
-      <input type=button id="btBorrar" value="Eliminar el post">
     </div>
+  </div>
+
+  <div class="modal fade" id="dialogo4">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <h1>Borrar post x ID</h1>
+        <div>
+          <label>post id:</label>
+          <input type="text" id="IdBorrarpost">
+        </div>
+        <input type=button id="btBorrar" value="Eliminar el post">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

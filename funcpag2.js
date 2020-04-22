@@ -1,22 +1,24 @@
-var arreglo = new Array();
-var i;
 $(document).ready(inicializarEventos);
 
 function inicializarEventos() {
-    $("#btemp").click(presionEnlace);
-    $("#btpostxid").click(postPorID);//llamadas a cada boton
-    $("#btCrearPost").click(crearPost);
-    $("#btBorrar").click(borrarPost);
-    $("#btActualizarpost").click(ActualizarPost);
+  
+  $("#btemp").click(presionEnlace);
+  $("#btpostxid").click(postPorID);//llamadas a cada boton
+  $("#btCrearPost").click(crearPost);
+  $("#btBorrar").click(borrarPost);
+  $("#btActualizarpost").click(ActualizarPost);
 }
 function presionEnlace() {
-    $.get( "https://jsonplaceholder.typicode.com/posts",
+    $.get("https://jsonplaceholder.typicode.com/posts",
     function( data ) {
         let arreglo = data;
         let x = $('#posts');
-        for (i=0;i<=arreglo.length;i++)
-        {x.append("<div> usuario: "+ arreglo[i].userId + "</div> <div> id del post : "+ arreglo[i].id + " </div> <div> titulo : "+ arreglo[i].title + "</div>");}
+        for (let i=0;i<=arreglo.length;i++)
+        {
+          x.append("<div> usuario: "+ arreglo[i].userId + "</div> <div> id del post : "+ arreglo[i].id + " </div> <div> titulo : "+ arreglo[i].title + "</div>");
+
         }
+      }
     );
 }
 
